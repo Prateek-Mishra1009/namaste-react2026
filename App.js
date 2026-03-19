@@ -1,21 +1,18 @@
-// const heading=React.createElement('h1',{id:"heading",xyz:"ABC",peppr:"hello buddy"},'hello world from react')
-// const root=ReactDOM.createRoot(document.getElementById('root'))
-//  root.render(heading)
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-const parent=React.createElement("div",{id:"parent"},[
-    React.createElement("div",{id:"child"},[
-        React.createElement("h1",{},"I am h1 tag"),
-        React.createElement("h1",{},"I am h1 tag")
+const App = () => (
+  <div id="parent">
+    <div id="child">
+      <h1 key="h1-1">I am h1 tag</h1>
+      <h1 key="h1-2">I am h1 tag</h1>
+    </div>
+    <div id="child2">
+      <h1 key="h1-3">I am heading child1</h1>
+      <h2 key="h2-1">I am child heading2</h2>
+    </div>
+  </div>
+)
 
-    ]),
-    React.createElement("div",{id:"child2"},[
-        React.createElement("h1",{},"i am heading child1"),
-        React.createElement("h2",{}, "i am child heading2")
-    ])
-])
-
-console.log(parent)
-
-const root=ReactDOM.createRoot(document.getElementById("root"))
-
-root.render(parent)
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(<App />)
