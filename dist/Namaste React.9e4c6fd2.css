@@ -1,4 +1,27 @@
-#heading {
-  color: red;
+.res-card {
+  width: 200px;
+  height: 350px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.res-card:hover {
+  border: 2px solid;
+}
+
+.res-logo {
+  width: 200px;
+  height: 200px;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.search {
+  border: 1px solid gray;
+  margin-bottom: 5px;
+  padding: 10px;
 }
 /*# sourceMappingURL=Namaste React.9e4c6fd2.css.map */
