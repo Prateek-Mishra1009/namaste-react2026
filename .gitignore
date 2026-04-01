@@ -2,4 +2,4 @@
 .parcel-cache/
 dist/
 build/
-.env
+.env.parcel-cache/

@@ -23,3 +23,8 @@
     border: 1px solid grey;
     margin-bottom: 5px;
 }
+
+.logout{
+    margin: 20px 0px 20px 0px;
+    padding: 0px 20px 0px 20px;
+}
