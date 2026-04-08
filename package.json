@@ -17,10 +17,13 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "devDependencies": {
-    "parcel": "^2.16.4"
+    "parcel": "^2.16.4",
+    "wrangler": "^4.81.0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
