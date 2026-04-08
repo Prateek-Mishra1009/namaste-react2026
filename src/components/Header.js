@@ -3,12 +3,13 @@ import React, { useState ,useEffect} from "react"
 import ReactDOM from "react-dom/client"
 
 import { Link } from "react-router-dom";
-
-
-
+import usenetwork from "./utils/useNetwork";
+import { useSelector } from "react-redux";
 
 const Header = () => {
 
+ const cartitems = useSelector((store) => store.cart.items);
+ console.log("my cart is ",cartitems)
 
  const [login,setLogin]=useState("login")
 
@@ -20,6 +21,8 @@ const Header = () => {
  const handleClick=()=>{
 
  }
+
+ const isOnline=usenetwork()
 
  
   const logOut=()=>{
@@ -51,7 +54,10 @@ const Header = () => {
           <li>
             <Link to="contact">Contact us</Link>
           </li>
-          <li>Cart</li>
+          <li>
+            <Link to="online">Network {isOnline ? "🟢" : "🔴"}</Link>
+          </li>
+          <li>Cart ({cartitems.length})</li>
           <button className="logout" onClick={()=>logOut()}>{login}</button>
         </div>
        

@@ -7,6 +7,7 @@ import ReactDOM from "react-dom/client"
 
 const RestaurantCart = (props) => {
     const {restaurantData}=props
+    console.log("inside restaurant ", props.restaurantData.info.id)
   
     return (
       <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>

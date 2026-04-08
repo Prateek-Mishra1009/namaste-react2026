@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import RestaurantCart from "./Restaurant";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListofRestaurants] = useState([]);
@@ -33,16 +34,15 @@ const Body = () => {
    
   // };
 
-  const search=()=>{
-    const value=event.target.value
+  const search = (event) => {
+    const value = event.target.value.toLowerCase();
+    setSearchText(value);
 
-    setSearchText(value)
-
-      const filteredCard=listOfRestaurants.filter((res)=>{
-        res.info.name.toLowerCase().includes(searchText)
-      })
-      setFilteredList()
-  }
+    const filteredCard = listOfRestaurants.filter((res) =>
+      res.info.name.toLowerCase().includes(value)
+    );
+    setFilteredList(filteredCard);
+  };
 
   const fetchData = async () => {
     try {
@@ -69,7 +69,7 @@ const Body = () => {
   return (
     <div className="body">
       <div className="search">
-        <input type="text" value={searchText} onChange={()=>search(event)} />
+        <input type="text" value={searchText} onChange={search} />
         <button >Search</button>
       </div>
 
@@ -78,8 +78,11 @@ const Body = () => {
       </button>
       <div className="res-container">
         {/* {console.log("before render", listOfRestaurants)}     */}
+
         {filteredList?.map((ele, index) => (
-          <RestaurantCart key={index} restaurantData={ele} />
+         <Link key={ele.info.id} to={`/restaurants/${ele.info.id}`}>
+           <RestaurantCart   restaurantData={ele} />
+         </Link>
         ))}
       </div>
     </div>
