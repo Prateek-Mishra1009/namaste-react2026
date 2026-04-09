@@ -1,3 +1,30 @@
-#heading{
-    color: red;
+.res-card{
+    width: 200px;
+    height: 350px;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+.res-card:hover{
+    border: 2px solid;
+}
+.res-logo{
+    width: 200px;
+    height: 200px;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search{
+    padding: 10px;
+    border: 1px solid grey;
+    margin-bottom: 5px;
+}
+
+.logout{
+    margin: 20px 0px 20px 0px;
+    padding: 0px 20px 0px 20px;
 }

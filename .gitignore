@@ -1,0 +1,11 @@
+/node_modules
+.parcel-cache/
+dist/
+build/
+.env.parcel-cache/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

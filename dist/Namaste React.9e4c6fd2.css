@@ -1,0 +1,32 @@
+.res-card {
+  width: 200px;
+  height: 350px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.res-card:hover {
+  border: 2px solid;
+}
+
+.res-logo {
+  width: 200px;
+  height: 200px;
+}
+
+.res-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.search {
+  border: 1px solid gray;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.logout {
+  margin: 20px 0;
+  padding: 0 20px;
+}
+/*# sourceMappingURL=Namaste React.9e4c6fd2.css.map */
